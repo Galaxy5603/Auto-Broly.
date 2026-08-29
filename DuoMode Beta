@@ -1,3 +1,9 @@
+--partner1 = "Name Player"
+--id1 = 0 -- https://www.roblox.com/users/YOUR ID ROBLOX/profile
+--id2 = 0 -- https://www.roblox.com/users/YOUR ID ROBLOX/profile
+--id3 = 0 --https://www.roblox.com/users/YOUR ID ROBLOX/profile
+
+
 local lI1oI0=(getfenv and getfenv(1)) or _ENV or _G
 local L1L011Oi00i1l,L1jjoo1=string.byte,string.char
 local function ijillll(IIiOIolL0ollol,Lio0LjIOoL10o)
