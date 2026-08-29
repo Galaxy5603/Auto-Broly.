@@ -1,7 +1,4 @@
-partner1 = "BLK_J1ren"
-id1 = 2257424957 -- https://www.roblox.com/users/YOUR ID ROBLOX/profile
-id2 = 0 -- https://www.roblox.com/users/YOUR ID ROBLOX/profile
-id3 = 0 --https://www.roblox.com/users/YOUR ID ROBLOX/profile
+
 
 
 local function callback(Text)
