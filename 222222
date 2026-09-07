@@ -1,0 +1,88 @@
+-- SETTINGS
+
+
+--[[
+SupGalaxy2
+demoledor2018
+IzeIIezl
+xxdivino_alfaxx
+R1tired
+blk_galaaxy
+TOPxManoyopay
+lLovemygirlyay
+TonkDroid
+]]--
+
+-- SCRIPT / Auto Leech
+repeat wait() until game:IsLoaded()
+game.Players.LocalPlayer.PlayerGui:WaitForChild("HUD")
+
+
+        local plr = game.Players.LocalPlayer
+        plr.PlayerGui.HUD.Bottom:WaitForChild("Stats").Image = 'rbxassetid://77490429181309' -- rbxassetid://11486610192 or rbxassetid://6717696974
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("HUD") then wait(1)
+game.Players.LocalPlayer.PlayerGui.HUD.Bottom.Stats.Visible = true
+    
+-- NO SLOW
+game.RunService.Stepped:Connect(function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v.Name == "Action" then v:Destroy()
+end end end)
+-- NO SLOW
+
+-- AUTO LEECH
+if not game.Workspace.Live:FindFirstChild("Broly BR") then
+game.Players.LocalPlayer.Backpack["Instant Transmission"].Parent = game.Players.LocalPlayer.Character
+while wait() do
+game:GetService("Players").LocalPlayer.Backpack.ServerTraits.FakeChat:FireServer(MainAcc)
+end
+-- AUTO LEECH
+
+else
+
+-- BROLY TRACKING
+    local track =
+    coroutine.create(
+    function()
+        Target = "Broly BR"
+        for i, w in pairs(game.Workspace.Live:GetChildren()) do
+            if string.match(string.lower(w.Name), string.lower(Target)) then
+                getgenv().BrolyTrack = true
+                while getgenv().BrolyTrack and game:GetService("RunService").Heartbeat:wait() do
+                    w:WaitForChild("HumanoidRootPart")
+                    for i, v in pairs(game.Workspace:GetChildren()) do
+                        if v:FindFirstChild("Ki") and v:FindFirstChild("Mesh") then
+                            v.CFrame = w.HumanoidRootPart.CFrame
+                        end
+                    end
+                    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                        if v:FindFirstChild("Ki") and v:FindFirstChild("Mesh") then
+                            v.CFrame = w.HumanoidRootPart.CFrame
+                        end
+                    end
+                end
+            end
+        end
+    end)
+coroutine.resume(track)
+-- BROLY TRACKING
+ 
+repeat
+ game:GetService("RunService").RenderStepped:Wait()
+            for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                if v.Name == "Chain Destructo Disk" then
+                    v.Parent = game:GetService("Workspace").Live[game.Players.LocalPlayer.Name]
+                    wait()
+                    v:Activate()
+                    v:Deactivate()
+                    v.Parent = game.Players.LocalPlayer.Backpack
+                end
+            end
+    if not game.Players:FindFirstChild(MainAcc) then
+    game:GetService("TeleportService"):Teleport(3565304751 , game.Players.LocalPlayer)
+    end
+    until game.Workspace.Live["Broly BR"].Humanoid.Health < .1
+    wait(.2)
+    game:GetService("TeleportService"):Teleport(3565304751 , game.Players.LocalPlayer)
+end
+end
