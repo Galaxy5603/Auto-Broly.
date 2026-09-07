@@ -31,7 +31,7 @@ end end end)
 if not game.Workspace.Live:FindFirstChild("Broly BR") then
 game.Players.LocalPlayer.Backpack["Instant Transmission"].Parent = game.Players.LocalPlayer.Character
 while wait() do
-game:GetService("Players").LocalPlayer.Backpack.ServerTraits.FakeChat:FireServer(Player)
+game:GetService("Players").LocalPlayer.Backpack.ServerTraits.FakeChat:FireServer(MainAcc)
 end
 -- AUTO LEECH
 
@@ -75,7 +75,7 @@ repeat
                     v.Parent = game.Players.LocalPlayer.Backpack
                 end
             end
-    if not game.Players:FindFirstChild(Player) then
+    if not game.Players:FindFirstChild(MainAcc) then
     game:GetService("TeleportService"):Teleport(3565304751 , game.Players.LocalPlayer)
     end
     until game.Workspace.Live["Broly BR"].Humanoid.Health < .1
