@@ -3,6 +3,27 @@ local broly = 2050207304
 local queue = 3565304751
 local earth = 536102540
 
+if game.PlaceId == queue then
+    coroutine.wrap(function()
+        wait(25)
+        notif("Rejoining..", "")
+        tp(game.PlaceId)
+        wait(5)
+        notif("Pad is broken.", "", 9e9)
+    end){}
+    run.Stepped:connect(function()
+        for i, v in ipairs(plr.Character:GetChildren()) do
+            if v.Name == "PowerOutput" or v.ClassName == "Model" then
+                v:Destroy()
+            end
+            if v.Name == "RebirthWings" then
+                if v:FindFirstChild("Handle") then
+                    v.Handle:Destroy()
+                end
+            end
+        end
+    end)
+
 --[[
 SupGalaxy2
 demoledor2018
@@ -19,7 +40,22 @@ TonkDroid
 
 --
 
+        plr.Character.Head.Anchored = true
+        kill(plr.Character, "RightLowerLeg")
+        kill(plr.Character, "LeftLowerLeg")
+        kill(plr.Character, "RightFoot")
+        kill(plr.Character, "LeftFoot")
+        kill(plr.Character, "LowerTorso")
+        kill(plr.Character, "RightUpperLeg")
+        kill(plr.Character, "LeftUpperLeg")
+        wait(.1)
 
+    twn(plr.Character.HumanoidRootPart, .1, CFrame.new(2753, 3945, -2286))
+    wait(.2)
+    run.Stepped:connect(function()
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(2753, 3945, -2286)
+        plr.Character.HumanoidRootPart.Anchored = true
+    end)
 -- Use Beans
             
 --PAD TP
@@ -85,26 +121,20 @@ else
     end)
 coroutine.resume(track)
 -- BROLY TRACKING
- 
+
+        if BrolyBR.HumanoidRootPart.CFrame == CFrame.new(-17.4921875, -126.50705, -16.6499023, 0.358377755, -0, -0.933576643, 0, 1, -0, 0.933576643, 0, 0.358377755) then
+            DoIAnchor = true
+            BrolyBR.LowerTorso.Anchored = true
+            plr.Character.HumanoidRootPart.Anchored = true
+        end
+    end
 repeat
  game:GetService("RunService").RenderStepped:Wait()
             for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                 if v.Name == "Chain Destructo Disk" then
                                     game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("bean")
                                 elseif not game.Workspace.Live:FindFirstChild then
-local function executeLoadString()
-    if not loadStringExecuted then
-        pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/LazarTM/FollowNPCS/main/FollowNPCS"))()
-        end)
-        loadStringExecuted = true then
-                    v.Parent = game:GetService("Workspace").Live[game.Players.LocalPlayer.Name]
-                    wait()
-                    v:Activate()
-                    v:Deactivate()
-                    v.Parent = game.Players.LocalPlayer.Backpack
-                end
-            end
+
     if not game.Players:FindFirstChild(MainAcc) then
     game:GetService("TeleportService"):Teleport(3565304751 , game.Players.LocalPlayer)
     end
