@@ -28,21 +28,7 @@ end
 
 
 -- Use Beans
-local tween =
-                                        game:GetService("TweenService"):Create(
-                                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                                        TweenInfo.new(-1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
-                                        {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 15)}
-                                    )
-                                    tween:Play()
-                                    game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-                                    game.Workspace.CurrentCamera.CFrame =
-                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                                    wait(.2)
-                                    game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("bean")
-                                elseif not game.Workspace.Live:FindFirstChild(partner1) then
-                
-
+            
 --PAD TP
 local tweenservice = game:GetService("TweenService")
 
