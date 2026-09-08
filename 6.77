@@ -14,7 +14,7 @@ TonkDroid
 ]]--
 
 -- queue tp 
-                game:GetService("TeleportService"):Teleport(536102540, Player)
+                game:GetService("TeleportService"):Teleport(3565304751, Player)
                 task.wait(0.5)
 
 local tweenservice = game:GetService("TweenService")
