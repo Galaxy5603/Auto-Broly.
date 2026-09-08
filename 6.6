@@ -13,6 +13,19 @@ lLovemygirlyay
 TonkDroid
 ]]--
 
+-- queue tp 
+                game:GetService("TeleportService"):Teleport(536102540, Player)
+                task.wait(0.5)
+
+local tweenservice = game:GetService("TweenService")
+
+local player = game:GetService("Players").LocalPlayer
+local char = player.Character
+
+local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad)
+local cframe = {CFrame = CFrame.new(-25.5303612, 418.599945, -392.37085, 0.999914587, 0.0128714694, -0.00226975279, -0, 0.173660457, 0.984805644, 0.0130700609, -0.984721541, 0.173645616)}
+tweenservice:Create(char.HumanoidRootPart, tweeninfo, cframe):Play()
+
 -- SCRIPT / Auto Leech
 repeat wait() until game:IsLoaded()
 game.Players.LocalPlayer.PlayerGui:WaitForChild("HUD")
