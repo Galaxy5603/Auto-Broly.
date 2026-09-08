@@ -22,9 +22,7 @@ pcall(function()
             for _ = 1, 30 do
                 game:GetService("TeleportService"):Teleport(536102540, Player)
                 task.wait(0.5)
-            end
-        end
-    end
+
 --PAD TP
 local tweenservice = game:GetService("TweenService")
 
