@@ -3,26 +3,7 @@ local broly = 2050207304
 local queue = 3565304751
 local earth = 536102540
 
-if game.PlaceId == queue then
-    coroutine.wrap(function()
-        wait(25)
-        notif("Rejoining..", "")
-        tp(game.PlaceId)
-        wait(5)
-        notif("Pad is broken.", "", 9e9)
-    end){}
-    run.Stepped:connect(function()
-        for i, v in ipairs(plr.Character:GetChildren()) do
-            if v.Name == "PowerOutput" or v.ClassName == "Model" then
-                v:Destroy()
-            end
-            if v.Name == "RebirthWings" then
-                if v:FindFirstChild("Handle") then
-                    v.Handle:Destroy()
-                end
-            end
-        end
-    end)
+
 
 --[[
 SupGalaxy2
