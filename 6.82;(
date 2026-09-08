@@ -28,7 +28,6 @@ end
 
 
 -- Use Beans
-if game.PlaceId == broly then
 local tween =
                                         game:GetService("TweenService"):Create(
                                         game.Players.LocalPlayer.Character.HumanoidRootPart,
@@ -42,7 +41,6 @@ local tween =
                                     wait(.2)
                                     game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("bean")
                                 elseif not game.Workspace.Live:FindFirstChild(partner1) then
-wait(.25)
                 
 
 --PAD TP
