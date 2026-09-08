@@ -21,21 +21,6 @@ TonkDroid
 
 --
 
-        plr.Character.Head.Anchored = true
-        kill(plr.Character, "RightLowerLeg")
-        kill(plr.Character, "LeftLowerLeg")
-        kill(plr.Character, "RightFoot")
-        kill(plr.Character, "LeftFoot")
-        kill(plr.Character, "LowerTorso")
-        kill(plr.Character, "RightUpperLeg")
-        kill(plr.Character, "LeftUpperLeg")
-        wait(.1)
-
-    twn(plr.Character.HumanoidRootPart, .1, CFrame.new(2753, 3945, -2286))
-    wait(.2)
-    run.Stepped:connect(function()
-        plr.Character.HumanoidRootPart.CFrame = CFrame.new(2753, 3945, -2286)
-        plr.Character.HumanoidRootPart.Anchored = true
 -- Use Beans
             
 --PAD TP
