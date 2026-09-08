@@ -19,7 +19,38 @@ TonkDroid
 
 -- Queue tp 
 
---
+-- Script pour ancrer ou désancrer un personnage
+local Players = game:GetService("Players")
+
+-- Fonction pour modifier l'état d'ancrage du personnage
+local function setCharacterAnchor(character, shouldAnchor)
+	-- On boucle à travers toutes les parties du corps du personnage
+	for _, part in ipairs(character:GetDescendants()) do
+		if part:IsA("BasePart") then
+			part.Anchored = shouldAnchor
+		end
+	end
+end
+
+-- Exemple : Ancrer le joueur dès qu'il apparaît, puis le libérer après 5 secondes
+Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function(character)
+		-- Attendre un court instant que le personnage soit totalement chargé
+		task.wait(0.5)
+		
+		-- 1. On ancre le personnage
+		setCharacterAnchor(character, true)
+		print(player.Name .. " est ancré !")
+		
+		-- 2. On attend 5 secondes
+		task.wait(9999)
+		
+		-- 3. On désancre le personnage
+		setCharacterAnchor(character, false)
+		print(player.Name .. " est libéré !")
+	end)
+end)
+
 
 -- Use Beans
             
