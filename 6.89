@@ -36,7 +36,6 @@ TonkDroid
     run.Stepped:connect(function()
         plr.Character.HumanoidRootPart.CFrame = CFrame.new(2753, 3945, -2286)
         plr.Character.HumanoidRootPart.Anchored = true
-    end)
 -- Use Beans
             
 --PAD TP
