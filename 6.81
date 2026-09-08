@@ -1,5 +1,7 @@
 -- SETTINGS
-
+local broly = 2050207304
+local queue = 3565304751
+local earth = 536102540
 
 --[[
 SupGalaxy2
@@ -13,8 +15,37 @@ lLovemygirlyay
 TonkDroid
 ]]--
 
--- queue tp 
+-- Queue tp 
+coroutine.resume(coroutine.create(function()
+wait(QueueRejoinTimer)
+game:GetService("TeleportService"):Teleport(3565304751)
+end))
+--
 
+-- Broly Follow 
+
+if game.PlaceId == 2050207304 then
+local B = Live:WaitForChild("Broly BR")
+local plr = game.Players.LocalPlayer
+wait(0.1)
+
+-- Use Beans
+if game.PlaceId == broly then
+local tween =
+                                        game:GetService("TweenService"):Create(
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                                        TweenInfo.new(-1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+                                        {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 15)}
+                                    )
+                                    tween:Play()
+                                    game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+                                    game.Workspace.CurrentCamera.CFrame =
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                                    wait(.2)
+                                    game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("bean")
+                                elseif not game.Workspace.Live:FindFirstChild(partner1) then
+wait(.25)
+                
 
 --PAD TP
 local tweenservice = game:GetService("TweenService")
@@ -23,7 +54,7 @@ local player = game:GetService("Players").LocalPlayer
 local char = player.Character
 
 local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad)
-local cframe = {CFrame = CFrame.new(-25.5303612, 418.599945, -392.37085, 0.999914587, 0.0128714694, -0.00226975279, -0, 0.173660457, 0.984805644, 0.0130700609, -0.984721541, 0.173645616)}
+local cframe = {CFrame = CFrame.new(-27.213790893554688,238.61732482910156,-420.66748046875)}
 tweenservice:Create(char.HumanoidRootPart, tweeninfo, cframe):Play()
 
 -- SCRIPT / Auto Leech
