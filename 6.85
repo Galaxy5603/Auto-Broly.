@@ -16,14 +16,7 @@ TonkDroid
 ]]--
 
 -- Queue tp 
-local function executeLoadString()
-    if not loadStringExecuted then
-        pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/LazarTM/FollowNPCS/main/FollowNPCS"))()
-        end)
-        loadStringExecuted = true
-    end
-end
+
 --
 
 
@@ -98,7 +91,13 @@ repeat
             for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                 if v.Name == "Chain Destructo Disk" then
                                     game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("bean")
-                                elseif not game.Workspace.Live:FindFirstChild(partner1) then
+                                elseif not game.Workspace.Live:FindFirstChild then
+local function executeLoadString()
+    if not loadStringExecuted then
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/LazarTM/FollowNPCS/main/FollowNPCS"))()
+        end)
+        loadStringExecuted = true then
                     v.Parent = game:GetService("Workspace").Live[game.Players.LocalPlayer.Name]
                     wait()
                     v:Activate()
